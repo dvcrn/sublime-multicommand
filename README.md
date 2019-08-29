@@ -1,13 +1,10 @@
 # Sublime Text Multi Commands
 
-A simple python script that enable users to easily execute multiple commands in Sublime Text 3. The original author is **Nilium**, who shared the original python code [here](https://www.sublimetext.com/forum/viewtopic.php?f=5&t=8677).
-
-I made a very tiny change to the code so that it can work with packages like [sublime-evernote](https://github.com/bordaigorl/sublime-evernote).
-
+Plugin for sublime to run multiple commands for a keybinding
 
 ## Install
 
-Download and put **run_multiple_commands.py** in your `/Packages/User/` directory.
+Download and put **multi_command.py** in your `/Packages/User/` directory.
 
 You can find the directory through `Preferences -> Browse Packages` in Sublime Text. Or depending on your OS, you can allocated it at:
 
@@ -36,7 +33,7 @@ In this example, when the user click "super+s", command *save* and command *save
     "keys": [
       "super+s"
     ],
-    "command": "run_multiple_commands",
+    "command": "multi_command",
     "args": {
       "commands": [
         {
@@ -53,34 +50,6 @@ In this example, when the user click "super+s", command *save* and command *save
       ]
     }
   }
-```
-
-### Another example:
-
-This is the example provided by **Nilium**.
-
-```json
-{
-  "keys": [
-    "ctrl+w"
-  ],
-  "command": "run_multiple_commands",
-  "args": {
-    "commands": [
-      {
-        "command": "find_under_expand",
-        "context": "window"
-      },
-      {
-        "command": "show_panel",
-        "args": {
-          "panel": "find"
-        },
-        "context": "window"
-      }
-    ]
-  }
-}
 ```
 
 ## Credit

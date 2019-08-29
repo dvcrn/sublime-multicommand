@@ -1,4 +1,4 @@
-# run_multiple_commands.py
+# multi_command.py
 
 # Author: Nilium
 # Purpose: To easily run multiple commands in Sublime Text.
@@ -7,7 +7,7 @@
 # Usage: Sublime Text -> Preferences -> Key Bindings - User, Edit your keymap file
   # [
   #   { "keys": ["ctrl+w"],
-  #     "command": "run_multiple_commands",
+  #     "command": "multi_command",
   #     "args": {
   #       "commands": [
   #         {"command": "find_under_expand", "context": "window"},
@@ -22,7 +22,7 @@
   #   "keys": [
   #     "super+s"
   #   ],
-  #   "command": "run_multiple_commands",
+  #   "command": "multi_command",
   #   "args": {
   #     "commands": [
   #       {
@@ -46,7 +46,7 @@ import sublime, sublime_plugin
 # an optional context (defaults to view commands) & runs each command in order.
 # Valid contexts are 'text', 'window', and 'app' for running a TextCommand,
 # WindowCommands, or ApplicationCommand respectively.
-class RunMultipleCommandsCommand(sublime_plugin.TextCommand):
+class MultiCommandCommand(sublime_plugin.TextCommand):
   def exec_command(self, command):
     if not 'command' in command:
       raise Exception('No command name provided.')
