@@ -3,7 +3,7 @@
     "keys": [
       "super+s"
     ],
-    "command": "multi_command",
+    "command": "multicommand",
     "args": {
       "commands": [
         {
