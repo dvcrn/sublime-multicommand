@@ -1,44 +1,35 @@
-# Sublime Text Multi Commands
+# SublimeText Multicommand
 
 Plugin for sublime to run multiple commands for a keybinding
 
 ## Install
 
+Install `Multicommand` through package control
+
 ## Usage
 
-Open your `sublime-keymap` file from `Preferences -> Key Bindings` in Sublime Text. 
+Open your `sublime-keymap` file from `Preferences -> Key Bindings` in Sublime Text.
 
-In this example, when the user click "super+s", command *save* and command *save_evernote_note* will be executed.
+Wrap the commands you want to execute within a `multicommand` section, the plugin will then execute them in order.
 
 ```json
-  {
-    "keys": [
-      "super+s"
-    ],
-    "command": "multicommand",
-    "args": {
-      "commands": [
-        {
-          "command": "save"
-        },
-        {
-          "command": "save_evernote_note",
-          "context": [
-            {
-              "key": "evernote_note"
-            }
-          ]
-        }
-      ]
-    }
+{
+  "keys": ["super+s"],
+  "command": "multicommand",
+  "args": {
+    "commands": [
+      {
+        "command": "save"
+      },
+      {
+        "command": "do_something_else"
+      },
+      {
+        "command": "show_panel",
+        "args": { "panel": "find_in_files" }
+      }
+    ]
   }
+}
 ```
 
-## Credit
-
-For Sublime Text Multi Commands, credit gose to its original author, **Nilium**.
-For [Sublime Evernote](https://github.com/bordaigorl/sublime-evernote), credit goes to its contributors.
-
-## License
-
-MIT

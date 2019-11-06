@@ -1,8 +1,6 @@
 [
   {
-    "keys": [
-      "super+s"
-    ],
+    "keys": ["super+s"],
     "command": "multicommand",
     "args": {
       "commands": [
@@ -10,12 +8,11 @@
           "command": "save"
         },
         {
-          "command": "save_evernote_note",
-          "context": [
-            {
-              "key": "evernote_note"
-            }
-          ]
+          "command": "do_something_else"
+        },
+        {
+          "command": "show_panel",
+          "args": { "panel": "find_in_files" }
         }
       ]
     }
